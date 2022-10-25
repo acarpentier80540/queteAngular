@@ -1,1 +1,53 @@
-<p>sign-up works!</p>
+<form #myForm="ngForm" (ngSubmit)="onSubmit()">
+    <div>
+      Form submitted ? {{myForm.submitted}}
+      Form valid ? {{myForm.valid}}
+      Form invalid ? {{myForm.valid}}
+    </div>
+  
+    <fieldset>
+      <label for="email-order">email</label>
+      <input id="email-order" name="email-order" type="text" [(ngModel)]="model.email" #email="ngModel" required >
+    </fieldset>
+  
+    <!-- Message d'erreurs de title -->
+    <div *ngIf="email.errors">
+      <span *ngIf="email.errors['required']">Le titre est requis</span>
+    </div>
+  
+  
+    <fieldset>
+      <label for="firstname-order">firstname</label>
+      <input id="firstname-order" name="firstname-order" [(ngModel)]="model.firstname" #firstname="ngModel" type="text" required minlength="5" maxlength="15"/>
+    </fieldset>
+  
+   <!-- Message d'erreurs de quantity -->
+    <div *ngIf="firstname.errors">
+      <span *ngIf="firstname.errors['required']">Le prenom est requis</span>
+      <span *ngIf="firstname.errors['minlength']">La longueur minimale doit être supérieure à 5</span>
+      <span *ngIf="firstname.errors['maxlength']">La longueur maximale doit être inférieure à 15</span>
+    </div>
+  
+  
+    <fieldset>
+      <label for="lastname-order">lastname</label>
+      <input id="lastname-order" name="lastname-order" type="text" [(ngModel)]="model.lastname" #lastname="ngModel" required minlength="5" maxlength="15"/>
+    </fieldset>
+  
+  <!-- Message d'erreurs de date -->
+    <div *ngIf="lastname.errors">
+      <span *ngIf="lastname.errors['required']">Le champ est requis</span>
+      <span *ngIf="lastname.errors['minlength']">La longueur minimale doit être supérieure à 5</span>
+      <span *ngIf="lastname.errors['maxlength']">La longueur maximale doit être inférieure à 15</span>
+    </div>
+  
+  
+    <fieldset>
+      <label for="password-order">password</label>
+      <input id="password-order" name="password-order" type="text" [(ngModel)]="model.password" #password="ngModel" required>
+    </fieldset>
+  
+ 
+
+    <button type="submit">Inscription</button>
+  </form>
