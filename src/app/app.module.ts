@@ -8,13 +8,17 @@ import { MenuComponent } from './menu/menu.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { ROUTES } from './app.routes';
+import { DeveloperComponentComponent } from './developer-component/developer-component.component';
+import { SkillComponentComponent } from './skill-component/skill-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     SignUpComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    DeveloperComponentComponent,
+    SkillComponentComponent
   ],
   imports: [
     BrowserModule,
