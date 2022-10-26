@@ -10,6 +10,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { ROUTES } from './app.routes';
 import { DeveloperComponent } from './developer/developer.component';
 import { SkillComponent } from './skill/skill.component';
+import { CreateOnomatopiaComponent } from './create-onomatopia/create-onomatopia.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SkillComponent } from './skill/skill.component';
     SignUpComponent,
     UserProfileComponent,
     DeveloperComponent,
-    SkillComponent
+    SkillComponent,
+    CreateOnomatopiaComponent
   ],
   imports: [
     BrowserModule,
