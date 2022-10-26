@@ -8,8 +8,8 @@ import { MenuComponent } from './menu/menu.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { ROUTES } from './app.routes';
-import { DeveloperComponentComponent } from './developer-component/developer-component.component';
-import { SkillComponentComponent } from './skill-component/skill-component.component';
+import { DeveloperComponent } from './developer/developer.component';
+import { SkillComponent } from './skill/skill.component';
 
 @NgModule({
   declarations: [
@@ -17,8 +17,8 @@ import { SkillComponentComponent } from './skill-component/skill-component.compo
     MenuComponent,
     SignUpComponent,
     UserProfileComponent,
-    DeveloperComponentComponent,
-    SkillComponentComponent
+    DeveloperComponent,
+    SkillComponent
   ],
   imports: [
     BrowserModule,
